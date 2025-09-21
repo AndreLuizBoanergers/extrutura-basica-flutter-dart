@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(AppWidget(title: 'Meu App'));
+  runApp(AppWidget(title: 'Glogal Search'));
 }
 
 class AppWidget extends StatelessWidget {
@@ -25,8 +25,20 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(child: Center(child: Text('Meu app..')));
+    return Container(
+      child: Center(
+        child: GestureDetector(
+          child: Text('Contador: $counter'),
+          onTap: () {
+            setState(() {
+              counter++;
+            });
+          },
+        ),
+      ),
+    );
   }
 }
