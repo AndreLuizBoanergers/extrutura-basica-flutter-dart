@@ -7,18 +7,19 @@ class HomePage extends StatefulWidget {
   }
 }
 
-class HomePageState extends State<HomePage> {
+class HomePageState extends State {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
         child: GestureDetector(
-          child: Text('Contador: $counter'),
+          child: Text("Contador: $counter"),
           onTap: () {
             setState(() {
               counter++;
             });
+            print("Clicou");
           },
         ),
       ),
